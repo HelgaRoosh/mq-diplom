@@ -1,0 +1,693 @@
+@font-face {    
+    font-family: osregular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: osbold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+  
+*{   /*отключить все отступы*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+  
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+a {
+    text-decoration: none; 
+    color: #ffffff;
+}
+  
+.header {
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*min-width: 1660px;*/
+    background-color: #000000;
+    padding: 27px 0 125px 0; /**/  
+    position: relative;
+    z-index: 0; 
+}
+  
+.header:after { /*маска */
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6; 
+    z-index: -1;
+}
+  
+/*ЛОГОТИП-----------------------------*/
+.header-logo {
+    width: 184px;
+    outline: none;
+} 
+  
+/*МЕНЮ-НАВИГАЦИЯ-----------------------------*/
+.header-menu { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 245px;
+}
+  
+.menu-list {
+    list-style-type: none;
+    display: flex;
+}
+  
+.menu-list-item:not(:last-child) {
+    margin-right: 35px;
+}
+  
+.menu-link {  
+    font-size: 13px;
+    font-family: osregular, sans-serif; 
+    text-transform: uppercase;  
+}
+  
+.menu-link:hover,
+.menu-link:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+  
+/*ЗАГОЛОВОК-БАННЕР-----------------------------*/
+.header-title {
+    margin: 100px auto 0; /**/
+   
+    width: 700px;
+}
+  
+.header-title-text{
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;  
+    font-size: 45px;
+    font-family: osbold, sans-serif;
+    line-height: 75px; /**/
+}
+  
+/*---------------ТРЕНД------------------------*/
+.trends-block {
+    width: 100%;
+}
+
+.title-trends,
+.title-shop {
+    text-align: center;
+    margin: 64px auto 5px auto; 
+    font-size: 20px; 
+    font-family: osbold, sans-serif;
+    color: #0f0d0e;
+    text-transform: uppercase;
+}
+
+.trends {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trend-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+   /* position: relative;
+    z-index: 0;*/
+}
+
+.trend {
+    width: 24.8%; /*(1660-12марджины):4 в проценты*/
+    min-height: 320px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #040a04;
+    position: relative;
+    z-index: 0;
+}
+
+.trend:after { /*маска */
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000;
+    opacity: 0.6; 
+    z-index: 1;
+}
+
+/*.trend:not(:last-child) {
+    margin-right: 2px;
+}
+
+.trend:not(:first-child) {
+    margin-left: 2px;
+}*/
+ 
+.trend-text{
+    width: 90%;
+    border: 3px solid #b59f5b;
+    padding: 37px 33px;
+    position: absolute; 
+    bottom: 17px;
+    margin: auto 24px;
+    z-index: 2;
+}
+
+.trend-link {
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 20px;
+}
+  
+/*---------ЛЕНТА НОВОСТЕЙ+САЙДБАР+ПОДВАЛ--------------------*/
+.page {
+    display: flex;
+    box-sizing: border-box;
+    width: 1170px; /*???*/
+    padding: 60px 0 5px 0;/**/
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+/*ЛЕНТА НОВОСТЕЙ-----------------------------*/
+.news {
+    box-sizing: border-box;
+    width: 778px; /**/
+    left: 0;
+}
+  
+.news-block {
+    display: flex;
+}
+
+.news-block:not(:last-child) {
+    margin-bottom: 61px;
+}
+  
+.news-img {
+   display: block;
+   width: 381px;
+}
+  
+.news-info {
+    box-sizing: border-box;
+    margin-left: 30px;
+}
+  
+/*КАТЕГОРИИ------ */
+.category {  
+    padding: 0;
+    margin-bottom: 10px; /**/
+    margin-top: 0;
+    display: flex;
+}
+  
+.category-item:not(:last-child) {
+    margin-right: 18px;
+}
+  
+.category-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: osbold;
+    text-transform: uppercase;
+    color: #b59f5b;   
+}
+  
+.news-name,
+.product-title  {   /*ЗАГОЛОВОК------ */
+    font-size: 20px; 
+    font-family: osbold, sans-serif;
+    line-height: 24px;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    margin-bottom: 0; 
+    padding: 0;
+    margin-top: 0;
+}
+  
+.date-author {
+    display: flex;
+    padding: 0;
+    margin-left: 0;
+    margin-bottom: 45px; 
+    margin-top: 25px;
+}
+  
+.news-date {
+    font-size: 12px;
+    font-family: osregular, sans-serif;
+    color: #888888;
+    margin-right: 15px;
+    margin-left: 0;
+}
+  
+.news-author {
+    font-size: 12px;
+    font-family: osbold, sans-serif;
+    color: #000000; 
+}
+  
+.news-description,
+.product-description {
+    font-size: 15px;
+    font-family: osregular, sans-serif;
+    line-height: 22px;
+    color: #0f0d0e; 
+    margin-top: 0;
+}
+
+.news-description-next {
+    margin-top: 10px;
+}
+  
+/*---------------------БОКОВАЯ ПАНЕЛЬ--------------*/
+.sidebar {
+    margin-left: 120px;
+    box-sizing: border-box;
+    width: 272px;
+}
+  
+/*НОВЫЕ ПОСТЫ--------------*/
+.news-sidebar {
+    display: block;
+}
+  
+.tittle-sidebar {  /* работает новые посты рассылка теги темы*/
+    font-family: osbold, sans-serif;
+    font-size: 14px;
+    color: #0f0d0e;
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+}
+
+  
+.news-block-sidebar {
+    display: flex;
+    margin-bottom: 21px;
+}
+  
+.news-img-sidebar {
+    display: block;
+    width: 70px;
+}
+  
+.news-info-sidebar{
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+  
+.new-date-sidebar {
+    font-size: 12px;
+    font-family: osregular, sans-serif;
+    color: #000000; 
+    margin: 0;
+}
+  
+.news-name-sidebar {
+    font-size: 14px;
+    font-family: osbold, sans-serif;
+    color: #000000; 
+    line-height: 18px;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+  
+/*поиск----------*/
+.search-sidebar {
+    margin-top: 62px; 
+}
+  
+.search {  
+    display: flex;
+    width: 100%;
+}
+  
+.meta-hidden { /*скрытая подпись*/
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+  
+.search-input {  
+    box-sizing: border-box;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 222px;
+    height: 48px;
+    font-size: 13px;
+    border: none;
+    background-color: #f4f7f6;
+}
+  
+.search-btn {
+    border: none;
+    width: 48px;
+    background-image: url(../svg/search.svg);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: center;
+    background-color: #b59f5b;
+}
+  
+/*рассылка ----------форма с майл---*/
+.mail-sidebar {
+    margin-top: 57px;
+}
+  
+.mail-input {  
+    box-sizing: border-box;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-top: 0x;
+    width: 100%;
+    height: 48px;
+    font-size: 13px;
+    border: none;
+    background-color: #f4f7f6;
+}
+  
+.mail-btn {
+    margin-top: 16px;
+    height: 48px;
+    border: none;
+    width: 100%;
+    background-color: #b59f5b;
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color:#ffffff;
+    font-size: 13px;
+}
+  
+/*ТЕГИ-----------------------*/
+.tegs-sidebar {
+    margin-top: 57px;
+}
+
+.list-tegs {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /*позволяет переносить на новую строку элементы*/
+}
+  
+.tegs-item {  
+    margin-bottom: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+  
+.tegs-link{
+    display: block;
+    box-sizing: border-box;
+    align-items: center;
+    align-content: space-between;
+    text-decoration: none;
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-size: 12px;
+    border: 2px solid #eeeeee;
+    padding: 4px 11px;
+}
+  
+/*ТЕМЫ------------------------- */
+  
+.themes-sidebar {
+    margin-top: 52px;
+    /*width: 272px;  */
+}
+  
+.list-theme {
+    list-style: none;
+    margin-left: 0;
+}
+  
+.theme-item {  
+    margin-left: 0;
+    margin-top: 10px;
+}
+  
+.theme-item::after {
+    content: " ";
+    display: block;
+    margin-top: 10px;
+    /*margin-bottom: 15px;*/
+    width: 100%;
+    height: 1px;
+    background:#eeeeee;
+}
+  
+.theme-link {
+    text-decoration: none;
+    font-family: osbold, sans-serif;
+    color: #000000;
+    font-size: 14px;
+    padding: 0 5px 0 2px;
+    margin-left: 0;
+}
+  
+.theme-counter {
+    vertical-align: super;
+    color:#b59f5b;
+    font-family: osbold;
+    font-size: 12px;
+}
+  
+/*---------изделия---------*/
+.shop-block {
+    width: 1170px; /*???*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 64px;  
+}
+
+.shops {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop {
+    width: 29.63%;
+    height: 440px;
+    position: relative;
+}
+
+.shop:not(:last-child) {
+    margin-right: 33px;
+}
+
+.shop:not(:first-child) {
+    margin-left: 33px;
+}
+
+.shop-img {
+    width: 100%; 
+    object-fit: contain;
+    padding: 0 21px;
+}
+
+.shop-text {
+    width: 100%;
+    height: 267px;
+    border: 3px solid #b59f5b;
+    padding: 52px 21px 0 21px;
+    position: absolute; 
+    bottom: 0;
+}
+
+.product-footer {
+    margin-top: 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-prices
+.product-price-old {
+    text-decoration: line-through;
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-size: 14px;
+}
+
+.product-price {
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-size: 20px;
+}
+
+.product-rub {
+    font-family: inherit;
+    text-transform: uppercase;
+    color: inherit;
+    font-size: inherit;
+}
+
+.product-btn {
+    height: 50px;
+    width: 141px;
+    border: none;
+    background-color: #b59f5b;
+    font-family: osbold, sans-serif;
+    text-transform: uppercase;
+    color:#ffffff;
+    font-size: 14px;
+}
+
+.shop-link {
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: #b59f5b; 
+}
+/*-------серый контейнер с соцсетями--------*/
+.footer {
+    width: 1170px; /*???*/
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 40px;
+}
+  
+.address-socials {
+    background-color: #f4f7f6;
+    margin-bottom: 70px;
+    background-size: 100%;
+}
+  
+.socials {
+    list-style: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 33px 0;
+}
+  
+.socials-item:not(:last-child) {
+    margin-right: 28px;	
+}
+  
+.socials-link {
+    display: block;	
+    width: 21px;
+    height: 21px;	
+    background-repeat: no-repeat;
+    background-size: 21px;
+    background-position: center;
+}
+  
+.socials-link-twitter {
+    background-image: url(../svg/004-twitter.svg);
+    background-color: #f4f7f6;
+}
+  
+.socials-link-pinterest {
+    background-image: url(../svg/001-pinterest.svg);
+    background-color: #f4f7f6;
+}
+  
+.socials-link-facebook {
+    background-color: #f4f7f6;	
+    background-image: url(../svg/002-facebook-logo.svg);
+}
+  
+.socials-link-instagramm {
+    background-image: url(../svg/005-instagram.svg);
+    background-color: #f4f7f6;
+}
+  
+.socials-link-tumbl {
+    background-image: url(../svg/003-tumblr.svg);
+    background-color: #f4f7f6;
+}
+  
+.socials-link-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+  
+/*------нижняя ссылка мелкая--------------------------*/
+.copyright {  
+    font-family: osbold, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    color:#999999;  
+}
+
+/*-----ХОВЕРЫ ФОКУСЫ И ПОЛОСОЧКА-----*/ 
+.tittle-sidebar::after,
+.title-trends::after,
+.title-shop::after {  /*полосочка декоративная чтоб её, работает новые посты рассылка теги темы*/
+    content: " ";
+    display: block;
+    box-sizing: border-box;
+    width: 66px;
+    margin: 10px auto 25px auto;
+    border-bottom: 3px solid #e1d9bd;
+}
+
+.theme-link:hover,
+.theme-link:focus {
+    color: #b59f5b;
+    cursor: pointer;
+}
+  
+.mail-btn:hover,
+.mail-btn:focus,
+.product-btn:hover, 
+.product-btn:focus,
+.search-btn:hover,
+.search-btn:focus {
+    background-color: #323232;
+    cursor: pointer;
+}
+  
+.mail-input:focus,
+.search-input:focus {
+    outline: 1px solid #b59f5b;
+    outline-offset: -2px;
+}
+  
+.news-name-sidebar:hover,
+.news-name-sidebar:focus,
+.news-name:hover,
+.news-name:focus {
+    color: #b59f5b;
+    cursor: pointer;
+}
+ 
+.category-link:hover,
+.category-link:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
