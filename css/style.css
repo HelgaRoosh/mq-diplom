@@ -29,14 +29,30 @@ a {
     text-decoration: none; 
     color: #ffffff;
 }
-  
+ 
+@media (max-width: 640px) {
+    .header {
+        background-image: url(../images/banner-mobile.jpg);
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .header {
+        background-image: url(../images/banner-bg-tablet.jpg);
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        background-image: url(../images/banner-bg.jpg);
+    }
+}
+
 .header {
-    background-image: url(../images/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    /*min-width: 1660px;*/
     background-color: #000000;
-    padding: 27px 0 125px 0; /**/  
+    padding: 27px 0 125px 0;   
     position: relative;
     z-index: 0; 
 }
@@ -52,57 +68,119 @@ a {
     opacity: 0.6; 
     z-index: -1;
 }
-  
-/*ЛОГОТИП-----------------------------*/
-.header-logo {
-    width: 184px;
-    outline: none;
-} 
-  
-/*МЕНЮ-НАВИГАЦИЯ-----------------------------*/
-.header-menu { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 245px;
-}
-  
-.menu-list {
-    list-style-type: none;
-    display: flex;
-}
-  
-.menu-list-item:not(:last-child) {
-    margin-right: 35px;
-}
-  
-.menu-link {  
-    font-size: 13px;
-    font-family: osregular, sans-serif; 
-    text-transform: uppercase;  
-}
-  
-.menu-link:hover,
-.menu-link:focus {
-    text-decoration: underline;
-    cursor: pointer;
-}
-  
-/*ЗАГОЛОВОК-БАННЕР-----------------------------*/
-.header-title {
-    margin: 100px auto 0; /**/
-   
-    width: 700px;
-}
-  
-.header-title-text{
+
+.header-title-text {
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;  
-    font-size: 45px;
+    font-size: inherit;
     font-family: osbold, sans-serif;
-    line-height: 75px; /**/
+    line-height: 75px; 
 }
+ 
+/*---ЛОГОТИП-----МЕНЮ-НАВИГАЦИЯ-----------------*/
+@media (max-width: 640px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header-logo {
+        display: block;
+        width: 75%;
+        outline: none;
+        margin: 209px auto 0;
+    } 
+
+    .header-title {
+        margin: 44px auto 0;    
+        width: 75%;
+        font-size: 26px;
+    }
+
+    .menu-btn {
+        position: absolute;
+        top: 35px;
+        right: 15px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .header-logo {
+        width: 160px;
+        outline: none;
+    } 
+
+    .header-menu { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px 35px 0;
+    }
+
+    .header-title {
+        margin: 100px auto 0; /**/
+        width: 79.5%;
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .menu-list {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-btn {
+        display: none;
+    }
+
+    .header-logo {
+        width: 184px;
+        outline: none;
+    } 
+
+    .header-menu { 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 245px;
+    }
+
+    .menu-list {
+        list-style-type: none;
+        display: flex;
+    }
+  
+    .menu-list-item:not(:last-child) {
+        margin-right: 35px;
+    }
+  
+    .menu-link {  
+        font-size: 13px;
+        font-family: osregular, sans-serif; 
+        text-transform: uppercase;  
+    }
+  
+    .menu-link:hover,
+    .menu-link:focus {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .header-title {
+        margin: 100px auto 0; /**/
+        width: 700px;
+        font-size: 45px;
+    }
+}  
+
+/*
+@media (max-width: 640px)
+@media (min-width: 641px) and (max-width: 1199px)
+@media (min-width: 1200px)
+*/
   
 /*---------------ТРЕНД------------------------*/
 .trends-block {
@@ -135,9 +213,63 @@ a {
     z-index: 0;*/
 }
 
+@media (max-width: 640px) {
+    .trend-name {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 640px) and (orientation: portrait) {
+    .trend {
+        width: 100%;
+    }
+    .trend:not(:last-child){
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .trend {
+        width: 49.8%;
+        margin-bottom: 2px;
+    }
+    .trend:nth-child(odd){
+        margin-right: 2px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .trend-name {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: portrait) {
+    .trend {
+        width: 49.8%;
+        margin-bottom: 2px;
+    }
+    .trend:nth-child(odd){
+        margin-right: 2px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) and (orientation: landscape) {
+    .trend {
+        width: 24.8%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .trend {
+        width: 24.8%; /*(1660-12марджины):4 в проценты*/
+    }
+    .trend-name {
+        font-size: 20px;
+    }
+}
+
 .trend {
-    width: 24.8%; /*(1660-12марджины):4 в проценты*/
-    min-height: 320px;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #040a04;
@@ -156,14 +288,6 @@ a {
     opacity: 0.6; 
     z-index: 1;
 }
-
-/*.trend:not(:last-child) {
-    margin-right: 2px;
-}
-
-.trend:not(:first-child) {
-    margin-left: 2px;
-}*/
  
 .trend-text{
     width: 90%;
@@ -179,17 +303,38 @@ a {
     font-family: osbold, sans-serif;
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 20px;
 }
-  
-/*---------ЛЕНТА НОВОСТЕЙ+САЙДБАР+ПОДВАЛ--------------------*/
-.page {
+
+/*------основная информ после трендов --ширина области медиа---*/
+.basic-information {
+    box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+    .basic-information {
+        width: 100%;
+        padding: 12.5% 4.17% 0;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .basic-information {
+        width: 100%;
+        padding: 6.64% 4.56% 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .basic-information {
+        width: 100%;
+        padding: 3.86% 14.76% 0;
+    }
+}
+
+.page {  /*------ЛЕНТА НОВОСТЕЙ+САЙДБАР+ПОДВАЛ-------*/
     display: flex;
     box-sizing: border-box;
-    width: 1170px; /*???*/
-    padding: 60px 0 5px 0;/**/
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%; 
 }
   
 /*ЛЕНТА НОВОСТЕЙ-----------------------------*/
@@ -237,8 +382,7 @@ a {
     color: #b59f5b;   
 }
   
-.news-name,
-.product-title  {   /*ЗАГОЛОВОК------ */
+.news-name {   /*ЗАГОЛОВОК------ */
     font-size: 20px; 
     font-family: osbold, sans-serif;
     line-height: 24px;
@@ -271,8 +415,7 @@ a {
     color: #000000; 
 }
   
-.news-description,
-.product-description {
+.news-description {
     font-size: 15px;
     font-family: osregular, sans-serif;
     line-height: 22px;
@@ -305,7 +448,6 @@ a {
     text-transform: uppercase;
 }
 
-  
 .news-block-sidebar {
     display: flex;
     margin-bottom: 21px;
@@ -337,7 +479,7 @@ a {
     margin-top: 4px;
 }
   
-/*поиск----------*/
+/*---------поиск----------*/
 .search-sidebar {
     margin-top: 62px; 
 }
@@ -480,45 +622,110 @@ a {
   
 /*---------изделия---------*/
 .shop-block {
-    width: 1170px; /*???*/
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 64px;  
+    width: 100%; 
+    margin-bottom: 64px;  
 }
 
 .shops {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .shop {
+        width: 100%;
+    }
+
+    .shop:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .product-title {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    .shop {
+        width: 48.3%;
+    }
+
+    .shop:nth-child(odd) {
+        margin-right: 1.7%;
+    }
+
+    .shop:nth-child(even) {
+        margin-left: 1.7%; 
+    }
+
+    .product-title {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .shop {
+        width: 29.57%;
+    }
+
+    .shop:not(:last-child) {
+        margin-right: 2.82%;
+    }
+    
+    .shop:not(:first-child) {
+        margin-left: 2.82%;
+    }
+
+    .product-title {
+        font-size: 20px;
+    }
 }
 
 .shop {
-    width: 29.63%;
-    height: 440px;
     position: relative;
-}
-
-.shop:not(:last-child) {
-    margin-right: 33px;
-}
-
-.shop:not(:first-child) {
-    margin-left: 33px;
+    box-sizing: border-box;
 }
 
 .shop-img {
     width: 100%; 
     object-fit: contain;
-    padding: 0 21px;
+    padding: 0 25px;
 }
 
 .shop-text {
     width: 100%;
-    height: 267px;
-    border: 3px solid #b59f5b;
-    padding: 52px 21px 0 21px;
+    padding: 25px;
+    position: relative;
+}
+
+.shop-text::after {
+    content: "";
     position: absolute; 
+    border: 3px solid #b59f5b;
+    top: -30px;
     bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.product-title  { 
+    font-family: osbold, sans-serif;
+    line-height: 24px;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    margin-bottom: 0; 
+    padding: 0;
+    margin-top: 0;
+}
+
+.product-description {
+    font-size: 15px;
+    font-family: osregular, sans-serif;
+    line-height: 22px;
+    color: #0f0d0e; 
+    margin-top: 0;
 }
 
 .product-footer {
@@ -528,7 +735,6 @@ a {
     align-items: center;
 }
 
-.product-prices
 .product-price-old {
     text-decoration: line-through;
     font-family: osbold, sans-serif;
@@ -568,11 +774,23 @@ a {
     font-family: inherit;
     color: #b59f5b; 
 }
+
+.product-btn:hover, 
+.product-btn:focus {
+    background-color: #323232;
+    cursor: pointer;
+}
+
+.shop-link:hover,
+.shop-link:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /*-------серый контейнер с соцсетями--------*/
+
 .footer {
-    width: 1170px; /*???*/
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     padding-bottom: 40px;
 }
   
@@ -664,8 +882,6 @@ a {
   
 .mail-btn:hover,
 .mail-btn:focus,
-.product-btn:hover, 
-.product-btn:focus,
 .search-btn:hover,
 .search-btn:focus {
     background-color: #323232;
@@ -681,7 +897,8 @@ a {
 .news-name-sidebar:hover,
 .news-name-sidebar:focus,
 .news-name:hover,
-.news-name:focus {
+.news-name:focus,
+.trend-link:hover {
     color: #b59f5b;
     cursor: pointer;
 }
@@ -690,4 +907,31 @@ a {
 .category-link:focus {
     text-decoration: underline;
     cursor: pointer;
+}
+
+.tegs-link:hover {
+    border: 2px solid #b59f5b;
+}
+
+/*-----бургер меню--------*/
+.menu-btn {
+    width: 24px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+
+.burger-line {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.burger-line:not(:last-child) {
+    margin-bottom: 6px;
 }
