@@ -175,12 +175,6 @@ a {
         font-size: 45px;
     }
 }  
-
-/*
-@media (max-width: 640px)
-@media (min-width: 641px) and (max-width: 1199px)
-@media (min-width: 1200px)
-*/
   
 /*---------------ТРЕНД------------------------*/
 .trends-block {
@@ -336,32 +330,95 @@ a {
     box-sizing: border-box;
     width: 100%; 
 }
+
+/*
+@media (max-width: 640px)
+@media (min-width: 641px) and (max-width: 1199px)
+@media (min-width: 1200px)
+*/
   
 /*ЛЕНТА НОВОСТЕЙ-----------------------------*/
-.news {
+.news,
+.news-info {
     box-sizing: border-box;
-    width: 778px; /**/
-    left: 0;
-}
-  
-.news-block {
-    display: flex;
 }
 
-.news-block:not(:last-child) {
-    margin-bottom: 61px;
+@media (max-width: 640px) {
+    .page {
+        flex-direction: column;
+        }
+    .news {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%; 
+        margin-top: 47px;
+    }
+
+
+}
+@media (min-width: 641px) and (max-width: 1199px) {
+    .news {
+        width: 56.16%;
+    }
+    .sidebar {
+        width: 39.11%; 
+        margin-left: 4.73%;
+    }
+}
+
+@media (max-width: 1199px) {
+    .news-block {
+        flex-direction: column;
+    }
+    .news-preview {
+        width: 100%;
+        }    
+    .news-info {
+        width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 2px solid #eeeeee;
+        
+        margin-top: 17px;
+    }
+
+    .news-block:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .news-block {
+        display: flex;
+    }
+    .news {
+        width: 65.56%;
+    }
+    .sidebar {
+        width: 23.25%; 
+        margin-left: 11.19%;
+    }
+
+    .news-block:not(:last-child) {
+        margin-bottom: 61px;
+    }    
+    .news-preview {
+    width: 49.67%; /*381px;*/
+    }    
+    .news-info {
+        width: 53.57%;
+        margin-left: 3.9%; /*30px;*/
+    }
+
+
 }
   
 .news-img {
-   display: block;
-   width: 381px;
+    display: block;/**/
+    width: 100%; 
+    object-fit: contain;
 }
-  
-.news-info {
-    box-sizing: border-box;
-    margin-left: 30px;
-}
-  
+
 /*КАТЕГОРИИ------ */
 .category {  
     padding: 0;
@@ -429,14 +486,13 @@ a {
   
 /*---------------------БОКОВАЯ ПАНЕЛЬ--------------*/
 .sidebar {
-    margin-left: 120px;
     box-sizing: border-box;
-    width: 272px;
 }
   
 /*НОВЫЕ ПОСТЫ--------------*/
 .news-sidebar {
     display: block;
+    width: 100%;
 }
   
 .tittle-sidebar {  /* работает новые посты рассылка теги темы*/
@@ -455,7 +511,7 @@ a {
   
 .news-img-sidebar {
     display: block;
-    width: 70px;
+    width: 71px;
 }
   
 .news-info-sidebar{
@@ -482,10 +538,12 @@ a {
 /*---------поиск----------*/
 .search-sidebar {
     margin-top: 62px; 
+    width: 100%;
 }
   
 .search {  
     display: flex;
+    justify-content: space-between;
     width: 100%;
 }
   
@@ -500,7 +558,7 @@ a {
     box-sizing: border-box;
     padding-left: 18px;
     padding-right: 18px;
-    width: 222px;
+    width: 100%; 
     height: 48px;
     font-size: 13px;
     border: none;
@@ -509,7 +567,7 @@ a {
   
 .search-btn {
     border: none;
-    width: 48px;
+    width: 50px;
     background-image: url(../svg/search.svg);
     background-repeat: no-repeat;
     background-size: 16px;
@@ -526,7 +584,6 @@ a {
     box-sizing: border-box;
     padding-left: 18px;
     padding-right: 18px;
-    margin-top: 0x;
     width: 100%;
     height: 48px;
     font-size: 13px;
