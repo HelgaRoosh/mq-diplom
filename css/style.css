@@ -689,7 +689,7 @@ a {
 .shops {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch; /*flex-start;*/
     flex-wrap: wrap;
 }
 
@@ -746,6 +746,9 @@ a {
 .shop {
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .shop-img {
@@ -763,6 +766,8 @@ a {
     border: 3px solid #b59f5b;
     position: relative;
     z-index: 1;
+    flex-grow: 1;
+
     /*padding: 25px;
     position: relative;*/
 }
