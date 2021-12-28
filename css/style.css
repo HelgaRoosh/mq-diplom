@@ -712,6 +712,9 @@ a {
         width: 48.3%;
     }
 
+    .shop:nth-child(-n + 2) {
+        margin-bottom: 25px;
+    } 
     .shop:nth-child(odd) {
         margin-right: 1.7%;
     }
