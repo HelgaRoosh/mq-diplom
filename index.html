@@ -46,11 +46,11 @@
        </div>
       </header>
 
-      <div class="trends-block">
+      <section class="trends-block">
         <h2 class="title-trends">Сейчас в тренде</h2>
-        <section class="trends">
-            <article class="trend">  
-                <img class="trend-img" src="images/trend1.jpg">     
+        <div class="trends">
+              <article class="trend">  
+                <img class="trend-img" src="images/trend1.jpg" alt="изображение">     
                 <div class="trend-text">
                   <ul class="category">
                     <li class="category-item">
@@ -67,7 +67,7 @@
               </article>
         
               <article class="trend">
-                <img class="trend-img" src="images/trend2.jpg">
+                <img class="trend-img" src="images/trend2.jpg" alt="изображение">
                 <div class="trend-text">
                   <ul class="category">
                     <li class="category-item">
@@ -82,7 +82,7 @@
               </article>
         
               <article class="trend">
-                <img class="trend-img" src="images/trend3.jpg">
+                <img class="trend-img" src="images/trend3.jpg" alt="изображение">
                 <div class="trend-text">
                   <ul class="category">
                     <li class="category-item">
@@ -100,7 +100,7 @@
               </article>
         
               <article class="trend">
-                <img class="trend-img" src="images/trend4.jpg">
+                <img class="trend-img" src="images/trend4.jpg" alt="изображение">
                 <div class="trend-text">
                   <ul class="category">
                     <li class="category-item">
@@ -116,8 +116,9 @@
                     </h2>
                 </div>
               </article>
-        </section>
-      </div>
+        </div>
+      </section>
+      
 
       <div class="basic-information">
         <div class="page">       
@@ -346,17 +347,17 @@
                 </article>
               </section>
               
-              <section class="search-sidebar">
+              <div class="search-sidebar">
                 <form class="search">
                   <label class="search-label">
                     <span class="meta-hidden">Поле ввода</span>
-                    <input class="search-input" placeholder="Найти..." alt="поле ввода">
+                    <input type="text" class="search-input" placeholder="Найти..." alt="поле ввода">
                   </label>
-                  <button class="search-btn" alt="кнопка поиска">
+                  <button class="search-btn">
                     <span class="meta-hidden">Кнопка поиска</span>
                   </button>
                 </form>        
-              </section>
+              </div>
               
               <section class="mail-sidebar">
                 <h3 class="tittle-sidebar">рассылка</h3>
@@ -364,9 +365,9 @@
                 <form class="mail-form">
                   <label>
                     <span class="meta-hidden">Поле ввода email</span>
-                    <input type="email" class="mail-input" placeholder="Введите email-адрес" alt="поле для ввода электронной почты">
+                    <input type="email" class="mail-input" placeholder="Введите email-адрес">
                   </label>
-                  <button class="mail-btn" alt="подписаться">подписаться</button>
+                  <button class="mail-btn">подписаться</button>
                 </form>
               </section>
         
@@ -429,9 +430,9 @@
               
         </div>
 
-        <div class="shop-block">
+        <section class="shop-block">
           <h2 class="title-shop">наши изделия</h2>
-          <section class="shops">
+          <div class="shops">
             <article class="shop">
               <picture>
                 <source media="(max-width: 640px)" srcset="images/shop-item-mobile1.jpg">
@@ -459,7 +460,7 @@
                         </div>
                       </div>
                       <form>
-                        <button class="product-btn" alt="перейти" href="#0">в магазин</button>
+                        <button class="product-btn">в магазин</button>
                       </form>
                   </footer>               
               </div>
@@ -492,7 +493,7 @@
                         </div>
                       </div>
                       <form>
-                        <button class="product-btn" alt="перейти" href="#0">в магазин</button>
+                        <button class="product-btn">в магазин</button>
                       </form>
                   </footer>               
               </div>
@@ -525,14 +526,15 @@
                         </div>
                       </div>
                       <form>
-                        <button class="product-btn" alt="перейти" href="#0">в магазин</button>
+                        <button class="product-btn">в магазин</button>
                       </form>
                   </footer>               
               </div>
             </article>
               
-          </section>
-        </div>
+          </div>
+        </section>
+        
 
         <footer class="footer">
             <address class="address-socials">
