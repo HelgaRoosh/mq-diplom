@@ -974,11 +974,14 @@ a {
 .news-name-sidebar:focus,
 .news-name:hover,
 .news-name:focus,
-.trend-link:hover {
+.news-author:hover,
+.news-author:focus,
+.trend-link:hover,
+.trend-link:focus {
     color: #b59f5b;
     cursor: pointer;
 }
- 
+
 .category-link:hover,
 .category-link:focus {
     text-decoration: underline;
