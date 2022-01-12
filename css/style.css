@@ -1019,11 +1019,10 @@ a {
 }
 
 .popup {
-    /*display: none;*/
-    position: absolute;
-    
+    display: none;
+	
+    position: absolute;    
     width: 100%;
-
     top: 0;
     left: 0;
     right: 0;
@@ -1214,9 +1213,3 @@ a {
     outline: 1px solid #b59f5b;
     outline-offset: -2px;
 }
-
-/*
-@media (max-width: 640px)
-@media (min-width: 641px) and (max-width: 1199px)
-@media (min-width: 1200px)
-*/
