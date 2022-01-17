@@ -285,6 +285,7 @@ a {
  
 .trend-text{
     width: 90%;
+    max-height: 100%;
     border: 3px solid #b59f5b;
     padding: 5% 5%;/*37px 33px;*/
     position: absolute; 
